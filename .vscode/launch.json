@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/yuzu0/OneDrive/デスクトップ/CP11/Project1",
-      "program": "c:/Users/yuzu0/OneDrive/デスクトップ/CP11/Project1/build/Debug/outDebug",
+      "cwd": "c:/Users/yuzu0/OneDrive/デスクトップ/CP11/課題/CP11_kadai02",
+      "program": "c:/Users/yuzu0/OneDrive/デスクトップ/CP11/課題/CP11_kadai02/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
