@@ -5,6 +5,8 @@
 //-------------------------------------------------------------------------------------
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+#include <time.h>
 
 int main()
 {
@@ -12,6 +14,9 @@ int main()
 
     char angou[32] = "";
     char *p_char = NULL;
+
+    srand((unsigned int)time(NULL));
+    int rand_num = rand();
 
     // ˆÃ†‰»‚·‚é•¶Í
     strcpy(angou, "Hello World!");
@@ -26,7 +31,7 @@ int main()
     // ˆÃ†‰»
     while (*p_char != '\0')
     {
-        (*p_char) += 1;
+        (*p_char) += rand_num;
 
         p_char++;
     }
@@ -46,7 +51,7 @@ int main()
     // •œ†‰»
     while (*p_char != '\0')
     {
-        (*p_char) -= 1;
+        (*p_char) -= rand_num;
 
         p_char++;
     }
