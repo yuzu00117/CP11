@@ -1,67 +1,9 @@
-/*
-
-
-//-------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
 // #name CP11 ルイーダの酒場
-// #description キャラクターを格納する構造体のメモリを動的確保する
-// #make 2023/10/20
-//-------------------------------------------------------------------------------------
-#define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-
-// キャラクターデータ
-struct CHARACTER_DATA
-{
-	char Name[10]; // 名前
-	int HP;			// ヘルス
-	int AD;			// 攻撃力
-};
-
-// 関数宣言
-//void ViewList(CHARACTER_DATA* pCharaData);			// キャラクターリスト表示
-//void CharacterView(CHARACTER_DATA* pCharaData);		// キャラクター閲覧
-//void CharacterCreate(CHARACTER_DATA* pCharaData);	// キャラクター作成
-//void CharacterDelete(CHARACTER_DATA* pCharaData);	// キャラクター削除
-
-int main()
-{
-	CHARACTER_DATA *p;
-	// キャラクターの保存は10人まで
-	p = (CHARACTER_DATA*)malloc(sizeof(CHARACTER_DATA)*10);
-
-	CHARACTER_DATA CharaData[10] = {};
-
-	// TestCharacter 1
-	strcpy(CharaData[0].Name, "Chara1");
-	CharaData[0].HP = 100;
-	CharaData[0].AD = 50;
-
-	// TestCharacter 2
-	strcpy(CharaData[1].Name, "Chara2");
-	CharaData[1].HP = 200;
-	CharaData[1].AD = 100;
-
-	// TestCharacter 6
-	strcpy(CharaData[5].Name, "Chara6");
-	CharaData[5].HP = 500;
-	CharaData[5].AD = 250;
-
-	printf("---------------------------\n");
-	printf("ギルガメッシュの酒場\n");
-	printf("---------------------------\n");
-
-	// メモリ解放
-	free(p);
-	return 0;
-}
-*/
-//-------------------------------------------------------------------------------------
-// #name CP11 ギルガメッシュの酒場
-// #description キャラクターの閲覧と追加、削除ができるプログラム。最低3つの要素を管理すること
-// #make 2023/10/20
-//-------------------------------------------------------------------------------------
+// #description ギルガメッシュの酒場で作成したコードの構造体 "CHARACTER_DATA" のメモリを動的確保する
+// #make 2023/11/10
+// #update 2023/11/17
+//-----------------------------------------------------------------------------------------------------
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>

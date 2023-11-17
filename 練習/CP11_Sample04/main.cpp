@@ -13,12 +13,26 @@ int main()
     // ファイル読み込み設定でオープンする
     // オープン成功→file_pにアドレスが入る
     // オープン失敗（ファイルが存在しない）→file_pにNULLが入る
-    file_p = fopen(file_name, "r+");
+    file_p = fopen(file_name, "wt");
     if (file_p == NULL)
     {
         printf("ファイルのオープンに失敗");
         exit(0);
     }
+
+    putc('H', file_p);
+
+    /*
+
+    // ファイルの読み書き
+    char text;
+    while (text != EOF)
+    {
+        text = getc(file_p);
+        printf("%c", text);
+    }
+
+    */
 
     // ファイルをクローズ
     if (fclose(file_p) == EOF)
