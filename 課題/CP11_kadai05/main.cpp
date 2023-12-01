@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------
 // #name CP11 ルイーダの酒場改良版
-// #description ルイーダの酒場にセーブと    ロード機能を追加する
+// #description ルイーダの酒場にセーブとロード機能を追加する
 // #make 2023/11/17
 // #update 2023/11/17
 //-----------------------------------------------------------------------------------------------------
@@ -27,6 +27,7 @@ void CharacterLoad(CHARACTER_DATA *pCharaData);     // キャラクター読み込み
 int main()
 {
     CHARACTER_DATA *p;
+
     // キャラクターの保存は10人まで
     int data_size = 10;
     p = (CHARACTER_DATA *)malloc(sizeof(CHARACTER_DATA) * data_size);
@@ -216,7 +217,6 @@ void CharacterLoad(CHARACTER_DATA *pCharaData)
 
     file_p = fopen("characters.dat", "rb");
 
-    //
     if (file_p == NULL)
     {
         printf("ファイルのオープンに失敗\n");
