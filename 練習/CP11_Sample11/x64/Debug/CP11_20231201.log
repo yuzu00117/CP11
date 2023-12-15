@@ -1,0 +1,4 @@
+﻿  enemy.cpp
+C:\Users\yuzu0\OneDrive\デスクトップ\CP11\練習\CP11_Sample11\enemy.cpp(17,43): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\yuzu0\OneDrive\デスクトップ\CP11\練習\CP11_Sample11\enemy.cpp(18,44): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+  CP11_20231201.vcxproj -> C:\Users\yuzu0\OneDrive\デスクトップ\CP11\練習\CP11_Sample11\x64\Debug\CP11_20231201.exe

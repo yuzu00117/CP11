@@ -1,0 +1,25 @@
+﻿  main.cpp
+C:\Users\yuzu0\OneDrive\デスクトップ\CP11\練習\CP11_sample10\conioex.h(694): warning C4311: '型キャスト': ポインターを 'opensound::<unnamed-type-m> *' から 'DWORD' へ切り詰めます。
+C:\Users\yuzu0\OneDrive\デスクトップ\CP11\練習\CP11_sample10\conioex.h(694): warning C4302: '型キャスト': 'opensound::<unnamed-type-m> *' から 'DWORD' へ切り詰めます。
+C:\Users\yuzu0\OneDrive\デスクトップ\CP11\練習\CP11_sample10\conioex.h(699,17): warning C4311: '型キャスト': ポインターを '__conioex_h_SoundInfo *' から 'int' へ切り詰めます。
+C:\Users\yuzu0\OneDrive\デスクトップ\CP11\練習\CP11_sample10\conioex.h(699,17): warning C4302: '型キャスト': '__conioex_h_SoundInfo *' から 'int' へ切り詰めます。
+C:\Users\yuzu0\OneDrive\デスクトップ\CP11\練習\CP11_sample10\conioex.h(717,39): warning C4312: '型キャスト': 'int' からより大きいサイズの '__conioex_h_SoundInfo *' へ変換します。
+C:\Users\yuzu0\OneDrive\デスクトップ\CP11\練習\CP11_sample10\conioex.h(743,39): warning C4312: '型キャスト': 'int' からより大きいサイズの '__conioex_h_SoundInfo *' へ変換します。
+C:\Users\yuzu0\OneDrive\デスクトップ\CP11\練習\CP11_sample10\conioex.h(763,61): warning C4311: '型キャスト': ポインターを 'MCI_PLAY_PARMS *' から 'DWORD' へ切り詰めます。
+C:\Users\yuzu0\OneDrive\デスクトップ\CP11\練習\CP11_sample10\conioex.h(763,61): warning C4302: '型キャスト': 'MCI_PLAY_PARMS *' から 'DWORD' へ切り詰めます。
+C:\Users\yuzu0\OneDrive\デスクトップ\CP11\練習\CP11_sample10\conioex.h(781,39): warning C4312: '型キャスト': 'int' からより大きいサイズの '__conioex_h_SoundInfo *' へ変換します。
+C:\Users\yuzu0\OneDrive\デスクトップ\CP11\練習\CP11_sample10\conioex.h(806,39): warning C4312: '型キャスト': 'int' からより大きいサイズの '__conioex_h_SoundInfo *' へ変換します。
+C:\Users\yuzu0\OneDrive\デスクトップ\CP11\練習\CP11_sample10\conioex.h(811): warning C4311: '型キャスト': ポインターを 'MCI_STATUS_PARMS *' から 'DWORD' へ切り詰めます。
+C:\Users\yuzu0\OneDrive\デスクトップ\CP11\練習\CP11_sample10\conioex.h(811): warning C4302: '型キャスト': 'MCI_STATUS_PARMS *' から 'DWORD' へ切り詰めます。
+C:\Users\yuzu0\OneDrive\デスクトップ\CP11\練習\CP11_sample10\conioex.h(832,39): warning C4312: '型キャスト': 'int' からより大きいサイズの '__conioex_h_SoundInfo *' へ変換します。
+C:\Users\yuzu0\OneDrive\デスクトップ\CP11\練習\CP11_sample10\conioex.h(842): warning C4311: '型キャスト': ポインターを 'MCI_STATUS_PARMS *' から 'DWORD' へ切り詰めます。
+C:\Users\yuzu0\OneDrive\デスクトップ\CP11\練習\CP11_sample10\conioex.h(842): warning C4302: '型キャスト': 'MCI_STATUS_PARMS *' から 'DWORD' へ切り詰めます。
+C:\Users\yuzu0\OneDrive\デスクトップ\CP11\練習\CP11_sample10\conioex.h(874,39): warning C4312: '型キャスト': 'int' からより大きいサイズの '__conioex_h_SoundInfo *' へ変換します。
+C:\Users\yuzu0\OneDrive\デスクトップ\CP11\練習\CP11_sample10\conioex.h(885,64): warning C4311: '型キャスト': ポインターを 'MCI_DGV_SETAUDIO_PARMS *' から 'DWORD' へ切り詰めます。
+C:\Users\yuzu0\OneDrive\デスクトップ\CP11\練習\CP11_sample10\conioex.h(885,64): warning C4302: '型キャスト': 'MCI_DGV_SETAUDIO_PARMS *' から 'DWORD' へ切り詰めます。
+C:\Users\yuzu0\OneDrive\デスクトップ\CP11\練習\CP11_sample10\main.cpp(78,43): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\yuzu0\OneDrive\デスクトップ\CP11\練習\CP11_sample10\main.cpp(79,44): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+  player.cpp
+  コードを生成中...
+player.obj : error LNK2005: "int __cdecl floatToInt(float)" (?floatToInt@@YAHM@Z) は既に main.obj で定義されています。
+C:\Users\yuzu0\OneDrive\デスクトップ\CP11\練習\CP11_sample10\x64\Debug\CP11_20231201.exe : fatal error LNK1169: 1 つ以上の複数回定義されているシンボルが見つかりました。
