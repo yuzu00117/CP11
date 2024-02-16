@@ -21,9 +21,12 @@
 
 // バトル関数
 void battle(struct CharacterStats* character);
-// 名前入力
-void CharacterCreate(struct CharacterStats* character);
 
+// バーコードの数値をもとにステータスを生成
+void GenerateStatusFromBarcode(struct CharacterStats* character, int barcode);
+
+// キャラ作成関数
+void CharacterCreate(struct CharacterStats* character);
 //-------------------------------------------------------------
 
 
@@ -144,69 +147,10 @@ void battle(struct CharacterStats* character)
 
 //-------------------------------------------------------------
 // バーコードの数値をもとにステータスを生成
-void GenerateStatusFromBarcode(struct CharacterStats* character, int barcode)
-{
-    // バーコード番号をもとにランダムなHPとATKを生成
-    srand(barcode);
-    character->CharacterHP = rand() % 500 + 200;
-    character->CharacterATK = rand() % 15 + 5;
-
-    printf("バーコードから生成されたHP: %d\n", character->CharacterHP);
-    printf("バーコードから生成されたATK: %d\n", character->CharacterATK);
-}
+void GenerateStatusFromBarcode(struct CharacterStats* character, int barcode);
 
 //-------------------------------------------------------------
 // キャラ作成関数
-void CharacterCreate(struct CharacterStats* character)
-{
-    int barcode;
-
-    // ユーザーからのバーコード入力
-    printf("バーコードの数値を入力してください: ");
-    scanf("&d", &barcode);
-
-    // バーコードからステータスを生成
-    GenerateStatusFromBarcode(character, barcode);
-
-    // characterDEFを固定値で代入
-    // ※※※　DEFもランダムで生成できるように変更予定
-    character->CharacterDEF = 3;
-
-
-/*
-
-    // 文字列を格納するための配列を定義
-    // struct CharacterStats character; // 不要な行
-
-    // ユーザーに対して入力のプロンプトを表示
-    printf("キャラクターの名前を入力してください: ");
-
-    // fgets関数を使用して文字列を入力
-    // 第一引数には文字列を格納する配列、第二引数には最大読み込み文字数、第三引数には入力元（通常は標準入力）を指定
-    fgets(character->CharacterName, sizeof(character->CharacterName), stdin);
-
-    // fgetsは改行文字も読み込むため、必要な場合は削除する
-    // 現在は削除しヌル文字に変換
-    int length = strlen(character->CharacterName);
-    if (length > 0 && character->CharacterName[length - 1] == '\n')
-    {
-        character->CharacterName[length - 1] = '\0'; // 改行文字をヌル文字に置き換え
-    }
-
-    // 入力された文字列を表示
-    printf("入力されたキャラクターの名前: %s\n", character->CharacterName);
-
-    // HPとATKを生成し表示
-    GenerateRandomValue(character);
-
-    // CharacterDEFを固定値で代入
-    character->CharacterDEF = 3;
-
-    printf("生成されたランダムなHP: %d\n", character->CharacterHP);
-    printf("生成されたランダムなATK: %d\n", character->CharacterATK);
-
-    */
-}
-
+void CharacterCreate(struct CharacterStats* character);
 
 //-------------------------------------------------------------
