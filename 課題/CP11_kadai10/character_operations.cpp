@@ -16,15 +16,16 @@ int askForCharacterCreation(struct CharacterStats *character)
     // 新しいキャラクターを作成するかどうかを選択
 
     // ユーザーからの入力(y/n)を格納する変数
-    char createNewCharacter[2];
+    char createNewCharacter;
 
     printf("新しいキャラクターを作成しますか？ (y/n): \n");
     printf("※保存してあるキャラクターは削除されます");
-    
-    // 1文字の読み込みのためfgetsを使用
-    fgets(createNewCharacter, sizeof(createNewCharacter), stdin);
 
-    if (createNewCharacter[0] == 'y' || createNewCharacter[0] == 'Y')
+    // ユーザー入力(y/n)
+    rewind(stdin);
+    scanf("%c", &createNewCharacter);
+
+    if (createNewCharacter == 'y' || createNewCharacter == 'Y')
     {
         rewind(stdin);
         // 新しいキャラクターを作成
@@ -32,7 +33,7 @@ int askForCharacterCreation(struct CharacterStats *character)
         // ファイルに保存
         SaveCharacterToFile("character.dat", character);
     }
-    else if (createNewCharacter[0] == 'n' || createNewCharacter[0] == 'N')
+    else if (createNewCharacter == 'n' || createNewCharacter == 'N')
     {
         LoadCharacterFromFile("character.dat", character);
 

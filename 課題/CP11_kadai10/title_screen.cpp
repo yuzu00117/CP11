@@ -4,13 +4,21 @@
 void displayTitleScreen()
 {
     // タイトル画面の表示内容を記述
+    /*
     printf("=== タイトル画面 ===\n");
     printf("1. 新しいゲームを始める\n");
     printf("2. 以前のゲームを続ける\n");
     printf("3. ゲームを終了する\n");
+    */
+   	printf("***********************************\n");
+	printf("*          タイトル画面           *\n");
+	printf("***********************************\n");
+
+    getchar();
 }
 
 // ユーザー入力の処理
+// ※使用しない
 void handleUserInput()
 {
     printf("入力してください\n");
@@ -33,15 +41,4 @@ void handleUserInput()
         printf("無効な選択です\n");
         break;
     }
-}
-
-int main()
-{
-    // タイトル画面の表示
-    displayTitleScreen();
-
-    // ユーザー入力の処理
-    handleUserInput();
-
-    return 0;
 }
