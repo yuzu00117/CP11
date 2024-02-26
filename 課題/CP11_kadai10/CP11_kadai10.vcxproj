@@ -127,14 +127,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="battle.cpp" />
     <ClCompile Include="character_operations.cpp" />
+    <ClCompile Include="Console_color.cpp" />
     <ClCompile Include="file_operations.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="title_screen.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="battle.h" />
     <ClInclude Include="character.h" />
     <ClInclude Include="character_operations.h" />
+    <ClInclude Include="Console_color.h" />
     <ClInclude Include="file_operations.h" />
+    <ClInclude Include="title_screen.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

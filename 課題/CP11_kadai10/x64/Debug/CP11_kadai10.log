@@ -1,7 +1,10 @@
-﻿  character_operations.cpp
-C:\Users\yuzu0\OneDrive\デスクトップ\CP11\課題\CP11_kadai10\character_operations.cpp(16,36): error C2082: 仮パラメーター 'character' が再定義されました。
+﻿  battle.cpp
+C:\Users\yuzu0\OneDrive\デスクトップ\CP11\課題\CP11_kadai10\battle.cpp(12,20): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\yuzu0\OneDrive\デスクトップ\CP11\課題\CP11_kadai10\battle.cpp(30,61): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\yuzu0\OneDrive\デスクトップ\CP11\課題\CP11_kadai10\battle.cpp(31,57): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+  character_operations.cpp
+  Console_color.cpp
   main.cpp
-C:\Users\yuzu0\OneDrive\デスクトップ\CP11\課題\CP11_kadai10\main.cpp(72,20): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\yuzu0\OneDrive\デスクトップ\CP11\課題\CP11_kadai10\main.cpp(90,61): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\yuzu0\OneDrive\デスクトップ\CP11\課題\CP11_kadai10\main.cpp(91,57): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+  title_screen.cpp
   コードを生成中...
+  CP11_kadai10.vcxproj -> C:\Users\yuzu0\OneDrive\デスクトップ\CP11\課題\CP11_kadai10\x64\Debug\CP11_kadai10.exe

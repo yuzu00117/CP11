@@ -1,4 +1,6 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include "title_screen.h"
+#include "Console_color.h"
 
 // タイトル画面の表示
 void displayTitleScreen()
@@ -10,11 +12,54 @@ void displayTitleScreen()
     printf("2. 以前のゲームを続ける\n");
     printf("3. ゲームを終了する\n");
     */
-   	printf("***********************************\n");
-	printf("*          タイトル画面           *\n");
-	printf("***********************************\n");
+   setConsoleColor(FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY); // 白色
+   printf("=============================================================\n");
+   setConsoleColor(FOREGROUND_RED | FOREGROUND_INTENSITY); // 赤色
+   	printf("######    ###    ######     ####    #####   #####    #######\n");
+    setConsoleColor(FOREGROUND_GREEN | FOREGROUND_INTENSITY); // 赤色
+	printf("##  ##   ## ##   ##   ##   ##  ##  ##   ##   ## ##    ##    \n");
+    setConsoleColor(FOREGROUND_BLUE | FOREGROUND_INTENSITY); // 赤色
+	printf("##  ##  ##   ##  ##   ##  ##       ##   ##   ##  ##   ##    \n");
+    setConsoleColor(FOREGROUND_RED | FOREGROUND_INTENSITY); // 赤色
+    printf("#####   #######  ######   ##       ##   ##   ##  ##   ####  \n");
+    setConsoleColor(FOREGROUND_GREEN | FOREGROUND_INTENSITY); // 赤色
+    printf("##  ##  ##   ##  #####    ##       ##   ##   ##  ##   ##    \n");
+    setConsoleColor(FOREGROUND_BLUE | FOREGROUND_INTENSITY); // 赤色
+    printf("##  ##  ##   ##  ##  ##    ##  ##  ##   ##   ## ##    ##    \n");
+    setConsoleColor(FOREGROUND_RED | FOREGROUND_INTENSITY); // 赤色
+    printf("######  ##   ##  ##   ##    ####    #####   #####    #######\n");
 
+    printf("                                                            \n");
+
+    setConsoleColor(FOREGROUND_RED | FOREGROUND_INTENSITY); // 赤色
+	printf("######    ###   ######## ########   ##      #######   ##### \n");
+    setConsoleColor(FOREGROUND_GREEN | FOREGROUND_INTENSITY); // 赤色
+    printf("##  ##   ## ##     ##       ##      ##       ##      ##   ##\n");
+    setConsoleColor(FOREGROUND_BLUE | FOREGROUND_INTENSITY); // 赤色
+    printf("##  ##  ##   ##    ##       ##      ##       ##      ##   ##\n");
+    setConsoleColor(FOREGROUND_RED | FOREGROUND_INTENSITY); // 赤色
+    printf("#####   #######    ##       ##      ##       ####    ###### \n");
+    setConsoleColor(FOREGROUND_GREEN | FOREGROUND_INTENSITY); // 赤色
+    printf("##  ##  ##   ##    ##       ##      ##       ##      #####  \n");
+    setConsoleColor(FOREGROUND_BLUE | FOREGROUND_INTENSITY); // 赤色
+    printf("##  ##  ##   ##    ##       ##      ##       ##      ##  ## \n");
+    setConsoleColor(FOREGROUND_RED | FOREGROUND_INTENSITY); // 赤色
+    printf("######  ##   ##    ##       ##     #######  #######  ##   ##\n");
+    setConsoleColor(FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY); // 白色
+    printf("============================================================\n");
+    
+    printf("                                                            \n");
+
+    setConsoleColor(FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY); // 黄色
+    printf("========================Any Key Press========================\n");
+
+    // 文字色を白に戻す
+    setConsoleColor(FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY); // 白色
+    
     getchar();
+
+    // cls
+    system("cls");
 }
 
 // ユーザー入力の処理
@@ -25,7 +70,7 @@ void handleUserInput()
 
     // ユーザーの入力を格納する変数
     int choice;
-    scanf("%d", choice);
+    scanf("%d", &choice);
 
     // 入力された選択肢に応じて処理を行う
     switch (choice)

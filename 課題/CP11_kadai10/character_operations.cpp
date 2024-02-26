@@ -8,6 +8,7 @@
 #include "file_operations.h"
 #include "character_operations.h"
 #include "character.h"
+#include "Console_color.h"
 
 //-------------------------------------------------------------
 // キャラクター作成
@@ -19,7 +20,9 @@ int askForCharacterCreation(struct CharacterStats *character)
     char createNewCharacter;
 
     printf("新しいキャラクターを作成しますか？ (y/n): \n");
+    setConsoleColor(FOREGROUND_RED | FOREGROUND_INTENSITY);
     printf("※保存してあるキャラクターは削除されます");
+    setConsoleColor(FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY);
 
     // ユーザー入力(y/n)
     rewind(stdin);
@@ -58,7 +61,7 @@ void GenerateStatusFromBarcode(struct CharacterStats *character, int barcode)
 {
     // バーコード番号をもとにランダムなHPとATKを生成
     srand(barcode);
-    character->CharacterHP = rand() % 500 + 200;
+    character->CharacterHP = rand() % 100 + 50;
     character->CharacterATK = rand() % 15 + 5;
 
     printf("バーコードから生成されたHP: %d\n", character->CharacterHP);

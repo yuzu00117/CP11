@@ -4,12 +4,11 @@
 // #make 2023/11/17
 // #update 2023/02/19
 // #comment 追加予定機能
-//          ・タイトル画面の改良
 //          ・キャラクターの複数作成を可能にする
 //          ・バトルプログラムの改良
 //          　・アイテム、経験値の要素追加
 //            ・コマンド選択式にする
-//            ・print文字の色分け
+//            ・print文字の色分け(半分完了)
 //----------------------------------------------------------------------------------------------------
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -23,7 +22,7 @@
 #include "character_operations.h"
 #include "character.h"
 #include "title_screen.h"
-
+#include "battle.h"
 //-------------------------------------------------------------
 // 関数定義
 
@@ -65,59 +64,7 @@ int main()
 // バトルプログラム
 // キャラクターとエネミーのバトル
 // 5ターン 経過後の互いのHPを表示
-void battle(struct CharacterStats *character)
-{
-    // キャラクターのステータスは構造体から参照
-    
-    // エネミーのステータスを定義
-    srand((unsigned)time(NULL));
-    int enemyHP = rand() % 500 + 200;
-    float enemyATK = rand() % 15 + 5;
-    float enemyDEF = 3;
 
-    // ターン数
-    int turn = 5; // ターン数は任意で変更可能
-
-    // 攻撃計算用
-    int characterDMG, enemyDMG;
-    int randomDamage; // ダメージのランダム化に使用
-
-    // 5ターン
-    for (int i = 0; i < turn; i++)
-    {
-        // ダメージのランダム化
-        srand((unsigned)time(NULL));
-        randomDamage = rand() & 3;
-
-        // 攻撃力と防御力の計算
-        characterDMG = (character->CharacterATK - enemyDEF) + randomDamage;
-        enemyDMG = (enemyATK - character->CharacterDEF) + randomDamage;
-
-        // 戦闘
-        printf("------------------\n");
-        printf("%sの攻撃：%dのダメージ\n", character->CharacterName, characterDMG);
-        character->CharacterHP -= enemyDMG;
-        printf("敵の攻撃：%dのダメージ\n", enemyDMG);
-        enemyHP -= characterDMG;
-        printf("------------------\n");
-
-        // 一秒毎に処理
-        Sleep(2000);
-        // system("clear");
-    }
-
-    printf("ターン終了後の%sのHP：%d\n", character->CharacterName, character->CharacterHP);
-    printf("ターン終了後の敵のHP：%d\n", enemyHP);
-
-    if (character->CharacterHP < enemyHP)
-    {
-        printf("敵の勝利！\n");
-    }
-    else if (character->CharacterHP > enemyHP)
-    {
-        printf("プレイヤーの勝利！\n");
-    }
-}
 //-------------------------------------------------------------
 
 //-------------------------------------------------------------
